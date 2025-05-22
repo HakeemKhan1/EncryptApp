@@ -1,70 +1,85 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# SecureChat+ – End-to-End Encrypted Messaging App
 
-In the project directory, you can run:
+Created by Hakeem Khan  
+![SecureChat+](https://github.com/user-attachments/assets/42d12386-5713-40f4-8023-a4ecde37ec84)
 
-### `npm start`
+SecureChat+ is a full-stack secure messaging platform that enables users to communicate through **end-to-end encrypted messages** using **RSA cryptography**. It uses **React** on the frontend and **FastAPI** (or Flask) on the backend to provide secure messaging, user authentication, and encrypted storage — all wrapped in a clean and intuitive UI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Contents
+1. [Features](#1-features)  
+2. [Getting Started](#2-getting-started)  
+3. [Future Enhancements](#3-future-enhancements)  
+4. [License](#4-license)  
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 1. Features
 
-### `npm run build`
+- **User Authentication**  
+  - Secure password hashing with `bcrypt`  
+  - JWT-based sessions  
+- **RSA Encryption**  
+  - Each user has their own RSA keypair  
+  - Messages encrypted with public key, decrypted with private key  
+- **Messaging System**  
+  - Send and receive encrypted messages  
+  - Time-stamped messages for context  
+- **Modern Frontend**  
+  - Built with React and styled with TailwindCSS  
+  - Components for login, chat, and inbox views  
+- **Backend Security**  
+  - FastAPI or Flask backend with secure endpoints  
+  - Messages stored in encrypted form in the database  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 2. Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2.1 Prerequisites
+- Node.js v16+  
+- Python 3.9+  
+- pip (Python package manager)  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2.2 Installation
 
-### `npm run eject`
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/securechat.git
+cd securechat
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 2. Setup the Frontend
+```bash
+cd frontend
+npm install
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 3. Setup the Backend
+```bash
+cd ../backend
+pip install -r requirements.txt
+python main.py
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 4. Visit the App
+- Frontend: [http://localhost:3000](http://localhost:3000)  
+- Backend: [http://localhost:8000](http://localhost:8000)  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 3. Future Enhancements
 
-## Learn More
+- Add support for file attachments (images, PDFs)  
+- Implement 2FA login  
+- Deploy with Docker & HTTPS via Nginx  
+- Add mobile responsiveness & PWA support  
+- Add unit and integration testing  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 4. License
 
-### Code Splitting
+This project is licensed under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
